@@ -3,10 +3,19 @@
     <div class="text-center p-3">
         <h2>Food Items</h2>
     </div>
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
+    <div class="row">
+      <div class="col-3" *ngFor="let category of categories">
+        <ng-container *ngIf="category.categoryName != 'string'">
+          <div class="card" style="width: 18rem;">
+            <img [src]="category.photoUrl" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">{{category.categoryName}}</p>
+            </div>
+          </div>
+        </ng-container>
       </div>
+    </div>
+    <div class="items-container">
+      
+    </div>
 </div>
