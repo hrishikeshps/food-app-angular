@@ -1,15 +1,18 @@
 
 <div class="container">
     <div class="text-center p-3">
-        <h2>Food Items</h2>
+        <h2>Food Categories</h2>
     </div>
     <div class="row">
-      <div class="col-3" *ngFor="let category of categories">
+      <div class="col-3 mb-5" *ngFor="let category of categories">
         <ng-container *ngIf="category.categoryName != 'string'">
           <div class="card" style="width: 18rem;">
             <img [src]="category.photoUrl" class="card-img-top" alt="...">
             <div class="card-body">
-              <p class="card-text">{{category.categoryName}}</p>
+              <h5 class="card-title text-capitalize">{{category.categoryName}}</h5>
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="button">Select</button>
+              </div>
             </div>
           </div>
         </ng-container>
