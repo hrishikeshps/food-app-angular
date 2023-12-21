@@ -12,6 +12,9 @@ import { HeaderNavComponent } from './header-nav/header-nav.component';
   imports: [
     CommonModule,
     LayoutRoutingModule
+  ],
+  exports: [
+    HeaderNavComponent
   ]
 })
 export class LayoutModule { }

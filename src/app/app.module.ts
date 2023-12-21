@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { LayoutModule } from './layout/layout.module';
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
@@ -18,7 +20,8 @@ import { CreateOrderComponent } from './pages/create-order/create-order.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
