@@ -7,11 +7,15 @@ import { CreateOrderComponent } from './pages/create-order/create-order.componen
 
 const routes: Routes = [
   {
+    path: '',
+    component: CategoriesComponent
+  },
+  {
     path:'login',
     component: LoginComponent
   },
   {
-    path:'foodCategory',
+    path:'food-category',
     component: CategoriesComponent
   },
   {
