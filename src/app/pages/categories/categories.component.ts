@@ -21,9 +21,7 @@ export class CategoriesComponent implements OnInit {
   fetchAllCategories(){
     this.mainSrv.getAllCategories()
       .subscribe((res: any) => {
-        console.log(res);
         this.categories = res.data.filter((item: any) => item.categoryName != 'string');
-        console.log(this.categories)
     });
   }
 
