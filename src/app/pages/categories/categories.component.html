@@ -4,7 +4,7 @@
         <h2>Food Categories</h2>
     </div>
     <div class="row">
-      <div class="col-3 mb-5" *ngFor="let category of categories">
+      <div class="col-3 mb-5" *ngFor="let category of categories" (click)="openDetail(category.categoryName)">
         <ng-container *ngIf="category.categoryName != 'string'">
           <div class="card" style="width: 18rem;">
             <img [src]="category.photoUrl" class="card-img-top" alt="...">

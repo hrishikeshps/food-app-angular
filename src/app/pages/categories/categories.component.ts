@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { MainService } from 'src/app/services/main.service';
 
@@ -10,7 +11,7 @@ import { MainService } from 'src/app/services/main.service';
 export class CategoriesComponent implements OnInit {
   public categories: any = [];
 
-  constructor(private mainSrv: MainService){
+  constructor(private mainSrv: MainService, private router: Router){
 
   }
 
@@ -23,6 +24,10 @@ export class CategoriesComponent implements OnInit {
       .subscribe((res: any) => {
         this.categories = res.data.filter((item: any) => item.categoryName != 'string');
     });
+  }
+
+  openDetail(type: string){
+    this.router.navigate([`/restaurant-items`,type])
   }
 
 }
