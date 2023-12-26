@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-restaurant-items',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./restaurant-items.component.scss']
 })
 export class RestaurantItemsComponent {
-
+  constructor(private activatedRoute: ActivatedRoute){
+    this.activatedRoute.params.subscribe((res: any) => {
+      console.log(res)
+    })
+  }
 }
