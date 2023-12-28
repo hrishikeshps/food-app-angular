@@ -8,6 +8,7 @@ import { MainService } from 'src/app/services/main.service';
   styleUrls: ['./restaurant-items.component.scss']
 })
 export class RestaurantItemsComponent {
+  public allRestaurants: any[] = [];
   constructor(private activatedRoute: ActivatedRoute, private mainSrv: MainService){
     this.activatedRoute.params.subscribe((res: any) => {
       console.log(res.categoryId);
@@ -19,6 +20,7 @@ export class RestaurantItemsComponent {
   fetchFoodItemsByCat(id: number) {
     this.mainSrv.getFoodItemsByCategoryName(id).subscribe((res:any) => {
       console.log(res)
+      this.allRestaurants = res.data;
     })
   }
 }
