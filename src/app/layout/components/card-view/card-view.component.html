@@ -1,1 +1,10 @@
-<ng-content></ng-content>
+
+<div class="card" style="width: 18rem;">
+    <img [src]="cardData.photoUrl" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-capitalize"><ng-content></ng-content></h5>
+      <div class="d-grid gap-2">
+        <button class="btn btn-primary" type="button">Select</button>
+      </div>
+    </div>
+  </div>

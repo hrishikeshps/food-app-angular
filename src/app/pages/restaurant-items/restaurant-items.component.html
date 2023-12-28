@@ -1,4 +1,12 @@
-<div *ngFor="let restaurant of allRestaurants">
-    
-    <app-card-view>{{restaurant.restaurantName}} -- name</app-card-view>
+<div class="container">
+  <div class="text-center p-3">
+    <h2></h2>
+  </div>
+  <div class="row">
+    <div class="col-3 mb-5" *ngFor="let restaurant of allRestaurants">
+      <app-card-view [cardData]="restaurant">{{
+        restaurant.restaurantName
+      }}</app-card-view>
+    </div>
+  </div>
 </div>

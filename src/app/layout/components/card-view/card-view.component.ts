@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card-view',
@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-view.component.scss']
 })
 export class CardViewComponent {
+  @Input() cardData: any;
+
+  constructor(){
+
+  }
+  
+  ngOnInit(){
+    console.log(this.cardData);
+    
+  }
 
 }
