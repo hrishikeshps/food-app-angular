@@ -9,6 +9,7 @@ import { MainService } from 'src/app/services/main.service';
 })
 export class RestaurantItemsComponent {
   public allRestaurants: any[] = [];
+  public categoryTitle: string = '';
   constructor(private activatedRoute: ActivatedRoute, private mainSrv: MainService){
     this.activatedRoute.params.subscribe((res: any) => {
       console.log(res.categoryId);
@@ -21,6 +22,7 @@ export class RestaurantItemsComponent {
     this.mainSrv.getFoodItemsByCategoryName(id).subscribe((res:any) => {
       console.log(res)
       this.allRestaurants = res.data;
+      this.categoryTitle = res.data && res.data.length > 0 ? res.data[0].categoryName : '';
     })
   }
 }
