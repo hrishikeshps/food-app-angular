@@ -11,13 +11,13 @@ export class RestaurantItemsComponent {
   constructor(private activatedRoute: ActivatedRoute, private mainSrv: MainService){
     this.activatedRoute.params.subscribe((res: any) => {
       console.log(res.categoryName);
-      this.fetchFoodItemsByCat(res.categoryName);
+      this.fetchFoodItemsByCat(res.categoryId);
 
     })
   }
 
-  fetchFoodItemsByCat(name: string) {
-    this.mainSrv.getFoodItemsByCategoryName(name).subscribe((res:any) => {
+  fetchFoodItemsByCat(id: number) {
+    this.mainSrv.getFoodItemsByCategoryName(id).subscribe((res:any) => {
       console.log(res)
     })
   }
