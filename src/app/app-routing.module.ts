@@ -19,7 +19,7 @@ const routes: Routes = [
     component: CategoriesComponent
   },
   {
-    path:'restaurant-items/:categoryName',
+    path:'restaurant-items/:categoryId',
     component: RestaurantItemsComponent
   },
   {

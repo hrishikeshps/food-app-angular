@@ -15,6 +15,6 @@ export class MainService {
   }
 
   getFoodItemsByCategoryName(name: number){
-    return this.http.get(`https://freeapi.miniprojectideas.com/api/zomato/GetFoodItemByCategory?category=${name}`);
+    return this.http.get(`https://freeapi.miniprojectideas.com/api/zomato/GetRestaurantServingByCategoryId?categoryId=${name}`);
   }
 }

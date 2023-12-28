@@ -10,7 +10,7 @@ import { MainService } from 'src/app/services/main.service';
 export class RestaurantItemsComponent {
   constructor(private activatedRoute: ActivatedRoute, private mainSrv: MainService){
     this.activatedRoute.params.subscribe((res: any) => {
-      console.log(res.categoryName);
+      console.log(res.categoryId);
       this.fetchFoodItemsByCat(res.categoryId);
 
     })

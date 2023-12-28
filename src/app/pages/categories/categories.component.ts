@@ -26,8 +26,8 @@ export class CategoriesComponent implements OnInit {
     });
   }
 
-  openDetail(type: string){
-    this.router.navigate([`/restaurant-items`,type])
+  openDetail(id: number){
+    this.router.navigate([`/restaurant-items`, id])
   }
 
 }
