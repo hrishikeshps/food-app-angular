@@ -4,9 +4,10 @@
   </div>
   <div class="row">
     <div class="col-3 mb-5" *ngFor="let restaurant of allRestaurants">
-      <app-card-view [cardData]="restaurant">{{
+      <!-- <app-card-view [cardData]="restaurant">{{
         restaurant.restaurantName
-      }}</app-card-view>
+      }}</app-card-view> -->
+      <app-card-view-horizontal  [cardData]="restaurant">{{restaurant.restaurantName}}</app-card-view-horizontal>
     </div>
   </div>
 </div>

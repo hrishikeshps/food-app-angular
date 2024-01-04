@@ -1,0 +1,15 @@
+<div class="card" style="width: 18rem;">
+    <div class="row">
+        <div class="col-5">
+            <img [src]="cardData.photoUrl" class="card-img-top" alt="...">
+        </div>
+        <div class="col-7">
+            <div class="card-body">
+                <p class="card-title text-capitalize small"><ng-content></ng-content></p>
+                <p>{{cardData.price}}</p>
+              </div>
+        </div>
+    </div>
+    
+    
+  </div>
