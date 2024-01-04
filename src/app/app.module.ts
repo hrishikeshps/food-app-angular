@@ -10,6 +10,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { RestaurantItemsComponent } from './pages/restaurant-items/restaurant-items.component';
 import { CreateOrderComponent } from './pages/create-order/create-order.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CreateOrderComponent } from './pages/create-order/create-order.componen
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    LayoutModule
+    LayoutModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

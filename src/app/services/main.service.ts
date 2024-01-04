@@ -10,6 +10,10 @@ export class MainService {
 
   constructor(private http: HttpClient) { }
 
+  login(data: any){
+    return this.http.post("https://freeapi.miniprojectideas.com/api/zomato/Login", data)
+  }
+
   getAllCategories(){
     return this.http.get("https://freeapi.miniprojectideas.com/api/zomato/GetAllFoodCategory");
   }
