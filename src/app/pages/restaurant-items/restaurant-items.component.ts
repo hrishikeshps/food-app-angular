@@ -4,7 +4,7 @@ import { MainService } from 'src/app/services/main.service';
 
 @Component({
   selector: 'app-restaurant-items',
-  templateUrl: './restaurant-items.component.html',
+  templateUrl: './restaurant-items.component.html', 
   styleUrls: ['./restaurant-items.component.scss']
 })
 export class RestaurantItemsComponent {
@@ -24,5 +24,9 @@ export class RestaurantItemsComponent {
       this.allRestaurants = res.data;
       this.categoryTitle = res.data && res.data.length > 0 ? res.data[0].categoryName : '';
     })
+  }
+
+  selectedItemEmit(e: any){
+    console.log(e)
   }
 }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card-view-horizontal',
@@ -7,5 +7,14 @@ import { Component, Input } from '@angular/core';
 })
 export class CardViewHorizontalComponent {
   @Input() cardData: any;
+  @Output() selectedItem = new EventEmitter<any>();
+
+  constructor(){
+
+  }
+
+  addItem(){
+    this.selectedItem.emit(this.cardData);
+  }
   
 }
