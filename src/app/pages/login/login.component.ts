@@ -21,7 +21,8 @@ export class LoginComponent {
     this.mainSrv.login(this.loginObj).subscribe((res: any)=> {
       console.log(res);
       if(res.result){
-        alert('Success')
+        alert('Success');
+        localStorage.setItem('userInfo', JSON.stringify(res.data));
       } else {
         alert('Wrong username/password');
       }
