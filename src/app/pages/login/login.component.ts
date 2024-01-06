@@ -20,6 +20,11 @@ export class LoginComponent {
   onLogin(){
     this.mainSrv.login(this.loginObj).subscribe((res: any)=> {
       console.log(res);
+      if(res.result){
+        alert('Success')
+      } else {
+        alert('Wrong username/password');
+      }
     })
   }
 }
