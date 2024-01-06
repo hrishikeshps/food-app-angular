@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { MainService } from 'src/app/services/main.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class LoginComponent {
     password: ""
   }
 
-  constructor(private mainSrv: MainService){
+  constructor(private mainSrv: MainService, private router: Router){
 
   }
 
@@ -21,8 +22,8 @@ export class LoginComponent {
     this.mainSrv.login(this.loginObj).subscribe((res: any)=> {
       console.log(res);
       if(res.result){
-        alert('Success');
         localStorage.setItem('userInfo', JSON.stringify(res.data));
+        this.router.navigate(['food-category']);
       } else {
         alert('Wrong username/password');
       }
