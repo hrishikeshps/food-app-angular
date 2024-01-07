@@ -17,6 +17,17 @@ export class GLobalService {
 
   setUser(user: any){
     localStorage.setItem('userInfo', JSON.stringify(user));
+    this.updateUserLogged(true);
+  }
+
+  checkUser(){
+    let userInfo: any = localStorage.getItem('userInfo');
+    userInfo = JSON.parse(userInfo)
+    if(userInfo && userInfo.role){
+      this.updateUserLogged(true);
+    } else {
+      this.updateUserLogged(false);
+    }
   }
 
 }
