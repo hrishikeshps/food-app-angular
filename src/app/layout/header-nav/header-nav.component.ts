@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GLobalService } from 'src/app/services/global.service';
 
 @Component({
   selector: 'app-header-nav',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class HeaderNavComponent {
 
+  public isUserLogged: boolean = false;
+
+  constructor(private globalSrv: GLobalService){
+
+  }
+  
+  ngOnInit(){
+    this.globalSrv.isUserLoggedIn.subscribe((val: boolean) => {
+      this.isUserLogged = val;
+    })
+  }
 }

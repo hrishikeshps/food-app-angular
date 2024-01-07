@@ -12,14 +12,14 @@
           <a class="nav-link active" routerLink="food-category">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="login">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Orders</a>
+          <a class="nav-link" routerLink="login">Categories</a>
         </li>
       </ul>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 user-dropdown">
-        <li class="nav-item dropdown">
+        <li class="nav-item" *ngIf="!isUserLogged">
+          <a class="nav-link" href="login">Sign In</a>
+        </li>
+        <li class="nav-item dropdown" *ngIf="isUserLogged">
           <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="assets/images/user.jpg" alt="User" class="user-profile-image" width="30" height="30">
           </a>
