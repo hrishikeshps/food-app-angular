@@ -27,6 +27,17 @@ export class RestaurantItemsComponent {
   }
 
   selectedItemEmit(e: any){
-    console.log(e)
+    console.log(e);
+    const modal = document.getElementById('myModal');
+    if(modal != null){
+      modal.style.display = 'block';
+    }
+  }
+
+  closeModal(){
+    const modal = document.getElementById('myModal');
+    if(modal != null){
+      modal.style.display = 'none';
+    }
   }
 }
