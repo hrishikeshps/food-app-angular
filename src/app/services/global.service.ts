@@ -15,4 +15,8 @@ export class GLobalService {
     this.isUserLoggedIn.next(nextValue);
   }
 
+  setUser(user: any){
+    localStorage.setItem('userInfo', JSON.stringify(user));
+  }
+
 }
