@@ -40,4 +40,8 @@ export class RestaurantItemsComponent {
       modal.style.display = 'none';
     }
   }
+
+  updateQty(){
+    console.log('update qty now -->')
+  }
 }
