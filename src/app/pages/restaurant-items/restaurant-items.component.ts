@@ -10,6 +10,8 @@ import { MainService } from 'src/app/services/main.service';
 export class RestaurantItemsComponent {
   public allRestaurants: any[] = [];
   public categoryTitle: string = '';
+  public quantity: number = 0;
+
   constructor(private activatedRoute: ActivatedRoute, private mainSrv: MainService){
     this.activatedRoute.params.subscribe((res: any) => {
       console.log(res.categoryId);

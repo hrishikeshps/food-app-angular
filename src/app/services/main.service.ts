@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MainService {
-
+  
   public itemsArr: any[] = [];
 
   constructor(private http: HttpClient) { }
