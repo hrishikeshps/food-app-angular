@@ -19,4 +19,8 @@ export class HeaderNavComponent {
       this.isUserLogged = val;
     })
   }
+
+  logout(){
+    this.globalSrv.clearUser();
+  }
 }

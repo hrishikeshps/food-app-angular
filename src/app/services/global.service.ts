@@ -30,4 +30,9 @@ export class GLobalService {
     }
   }
 
+  clearUser(){
+    localStorage.removeItem('userInfo');
+    this.updateUserLogged(false);
+  }
+
 }
